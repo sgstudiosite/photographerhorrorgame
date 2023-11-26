@@ -1,0 +1,37 @@
+{geshi lang="css"}
+@keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-ms-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}{/geshi}
+
+На следующем шаге мы зададим правила показа анимации. Сначала мы указываем имя анимации, которую мы хотим использовать, в данном случае "snow", затем длительность анимации (20 секунд), затем выбираем тип анимации (linear) и, наконец, цикл анимации - бесконечный.
+
+{geshi lang="css"}
+div#wrapper {
+background-image: url('snowflake.png'), url('snowflake3.png'), url('snowflake2.png');
+height:100%;
+-webkit-animation: snow 20s linear infinite;
+-moz-animation: snow 20s linear infinite;
+-ms-animation: snow 20s linear infinite;
+animation: snow 20s linear infinite;
+} {/geshi}
+
+Для надписи можно использовать какой-нибудь красивый шрифт, в данном примере я использовал шрифт Lobster, который подключил к странице при помощи Google Web Fonts.
+
+{geshi lang="css"}
+<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'> {/geshi}
